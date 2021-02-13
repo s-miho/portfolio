@@ -183,10 +183,10 @@ html.fp-enabled,
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;
-    top: -2px;
-    color: #fff;
-    font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
+    top: -9px;
+    color: #333;
+    font-size: 20px;
+    font-family: "Squada One", "Yusei Magic", sans-serif;
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;

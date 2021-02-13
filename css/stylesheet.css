@@ -1,3 +1,49 @@
+html {
+  font-size: 16px;
+}
+
+/*   全体   */
+
+body span {
+  color: #96514d;
+}
+
+body {
+  color: #222;
+  font-size: 1rem;
+  font-family: "Squada One", "Yusei Magic", sans-serif;
+  text-align: center;
+}
+
+h1, h2 {
+  font-size: 3rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.section {
+  text-align:center;
+}
+
+
+
+/**     メディアクエリ    **/
+@media screen and (max-width:767px){
+  html {
+    font-size: 12px;
+  }
+  
+  #menu{
+    display:none;
+  }
+  header {
+    display:block;
+  }
+}
+
+
 
 /*  load画面  */
 
@@ -67,12 +113,8 @@
 
 
 
-/*  body  */
 
 
-.section {
-  text-align:center;
-}
 
 
 /*  flex  */
@@ -86,7 +128,10 @@
 
 
 
-/*  メニュー  */
+
+
+
+/******  メニュー  ******/
 
 header {
   display:none;
@@ -193,14 +238,8 @@ nav.globalMenuSp.active {
 }
 
 
-@media(max-width:767px){
-  #menu{
-    display:none;
-  }
-  header {
-    display:block;
-  }
-}
+
+/******    PC用メニュー   ******/
 
 #menu{
   position: fixed;
@@ -218,11 +257,11 @@ nav.globalMenuSp.active {
   margin: 20px 0px;
   list-style: none;
   padding: 0px 15px;
-  font-size: 25px;
+  font-size: 2rem;
 }
 
 
-/*   title   */
+/******   title   ******/
 
 .icon {
   max-width: 100%;
@@ -233,19 +272,33 @@ nav.globalMenuSp.active {
   margin-top: 10px;
 }
 
+
+/******   aboutme   ******/
+
+
+.boxAbout {
+  align-items:center;
+}
+
 .aboutmetext {
   margin-top: 25px;
+  padding: 0px 10px;
   text-align: left;
+}
+
+.aboutme h2 {
+  padding: 0px 10px;
 }
 
 .aboutmep {
   margin-top: 25px;
+  padding: 0px 10px;
   font-family: "Yusei Magic", sans-serif;
 }
 
 
 
-/*  work  */
+/******  work  ******/
 
 .works {
   padding-top: 100px;
@@ -266,7 +319,7 @@ nav.globalMenuSp.active {
 }
 
 .works-item .caption {
-	font-size:	16px;
+	font-size:	1rem;
 	text-align: center;
 	color:	#fff;
 }
@@ -315,8 +368,8 @@ nav.globalMenuSp.active {
   height: 400px;
   width: 600px;
   max-width: 90%;
-  padding: 40px;
-  font-size: 15px;
+  padding: 30px;
+  font-size: 1rem;
   font-family: "Yusei Magic", sans-serif;
 }
 
@@ -361,7 +414,8 @@ body.fixed {
 
 
 
-/*  skill  */
+/******  skill  ******/
+
 
 .box-skill {
   display: flex;
@@ -371,17 +425,24 @@ body.fixed {
 
 .skilllist {
   margin: 0px 20px;
+  padding-inline-start: 0 !important;
 }
 
 .skilllist li{
   text-align: left;
   list-style: none;
-  font-size: 20px;
+  font-size: 1.3rem;
   font-family: "Yusei Magic", sans-serif;
+  border-bottom: 3px dashed #DCCD90;
+}
+
+.skilllist img {
+  width: 1.4rem;
+  height:1.4rem;
 }
 
 
-/*  contact  */
+/******  contact  ******/
 
 .contact {
   padding: 20px 0px;
@@ -444,7 +505,7 @@ textarea {
   border: 0;
   color:#926666;
   font-family: 'arial narrow';
-  font-size: 14px;
+  font-size: 1rem;
   }
 
 #form-name, #form-email {
@@ -456,9 +517,11 @@ button {
   color: #fff;
   border-radius: 5px;
   border: 0;
-  font-size: 12px;
+  font-size: 0.8rem;
   padding: 5px 10px;
 }
+
+/*メール送信後コメント*/
 
 article {
   max-width: 100%;
@@ -466,12 +529,17 @@ article {
 }
 
 article p {
-  font-size: 5px;
+  font-size: 1.6rem;
 }
 
 .fa-envelope{
-  font-size: 15px;
+  font-size: 1.6rem;
 }
+
+.mail-comment {
+  font-size: 1rem;
+}
+
 
 /*   リンク   */
 
@@ -488,10 +556,7 @@ a:hover {
   color: #96514d;
 }
 
-body {
-  font-family: "Squada One", "Yusei Magic", sans-serif;
-  text-align: center;
-}
+
 
 
 /*   feadInUp   */
@@ -510,13 +575,6 @@ h1.animated {
 
 
 
-/*   全体   */
-
-body span {
-  color: #96514d;
-}
-
-
 
 /*  footer  */
 
@@ -529,7 +587,6 @@ footer {
   width: 100%;
   padding: 0;
   margin: 0; 
-  font-size: 12px; 
   font-family: "Yusei Magic", sans-serif;
   max-height: 8%;
   max-width: 100%;
@@ -541,7 +598,7 @@ footer {
 }
 
 .github {
-  font-size: 25px;
+  font-size: 2rem;
   margin: 0 10px;
 }
 
