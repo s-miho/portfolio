@@ -1,0 +1,556 @@
+
+/*  load画面  */
+
+.hollow-dots-spinner, .hollow-dots-spinner * {
+      box-sizing: border-box;
+    }
+
+    .hollow-dots-spinner {
+      height: 15px;
+      width: calc(30px * 3);
+    }
+
+    .hollow-dots-spinner .dot {
+      width: 15px;
+      height: 15px;
+      margin: 0 calc(15px / 2);
+      border: calc(15px / 5) solid #ff1d5e;
+      border-radius: 50%;
+      float: left;
+      transform: scale(0);
+      animation: hollow-dots-spinner-animation 1000ms ease infinite 0ms;
+    }
+
+    .hollow-dots-spinner .dot:nth-child(1) {
+      animation-delay: calc(300ms * 1);
+    }
+
+    .hollow-dots-spinner .dot:nth-child(2) {
+      animation-delay: calc(300ms * 2);
+    }
+
+    .hollow-dots-spinner .dot:nth-child(3) {
+      animation-delay: calc(300ms * 3);
+
+    }
+
+    @keyframes hollow-dots-spinner-animation {
+      50% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+#loader-bg {
+    background: #FFFFF0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+.hollow-dots-spinner {	
+    background: #FFFFF0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+
+
+
+/*  body  */
+
+
+.section {
+  text-align:center;
+}
+
+
+/*  flex  */
+
+.box {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  
+}
+
+
+
+/*  メニュー  */
+
+header {
+  display:none;
+}
+
+/*　ハンバーガーボタン　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 13px;
+  top   : 12px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 0.5s all;
+  -moz-transition   : 0.5s all;
+  transition        : 0.5s all;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #555;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active{
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  background : #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+.hamburger.active span:nth-child(2) {
+  top: 16px;
+  background : #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+.hamburger.active span:nth-child(3) {
+  opacity: 0;
+}
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: .4s all;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+nav.globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: #fff;
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+nav.globalMenuSp.active {
+  opacity: 100;
+}
+
+
+@media(max-width:767px){
+  #menu{
+    display:none;
+  }
+  header {
+    display:block;
+  }
+}
+
+#menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin: 0; 
+}
+
+#menu li{
+  display: inline-block;
+  margin: 20px 0px;
+  list-style: none;
+  padding: 0px 15px;
+  font-size: 25px;
+}
+
+
+/*   title   */
+
+.icon {
+  max-width: 100%;
+  height: auto;
+}
+
+.title h1 {
+  margin-top: 10px;
+}
+
+.aboutmetext {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.aboutmep {
+  margin-top: 25px;
+  font-family: "Yusei Magic", sans-serif;
+}
+
+
+
+/*  work  */
+
+.works {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+
+/*  制作物のサムネ  */
+
+.works-item {
+	width:	300px;
+	height:	200px;
+	overflow:	hidden;
+  margin:10px 10px;
+	position:	relative;
+	border-radius: 30px;
+}
+
+.works-item .caption {
+	font-size:	16px;
+	text-align: center;
+	color:	#fff;
+}
+
+.works-item .mask {
+	width:	100%;
+	height:	100%;
+	position:	absolute;
+	top: 0;
+	left:	0;
+	opacity: 0;
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.4s ease;
+	transition:		all 0.6s ease;
+}
+
+.works-item:hover .mask {
+	opacity: 1;
+	padding-top: 80px;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+/* モーダル背景 */
+.modal-bg{
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* モーダル本体 */
+.modal-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: scroll;
+  background: #fff;
+  height: 400px;
+  width: 600px;
+  max-width: 90%;
+  padding: 40px;
+  font-size: 15px;
+  font-family: "Yusei Magic", sans-serif;
+}
+
+
+
+/* モーダルウィンドウ表示中に記事本体を固定 */
+
+body.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+/*  モーダル閉じる  */
+
+.closeModal {
+  text-align: right;
+}
+
+/*  モーダル中身  */
+
+.work-modal {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.smn {
+  border: 1px dashed #a9a9a9;
+}
+
+.modal-title{
+  background: linear-gradient(transparent 70%, #F7DD92 70%);
+}
+.shrink-text{
+  text-align: left;
+  margin-left: 10px;
+}
+
+
+
+/*  skill  */
+
+.box-skill {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skilllist {
+  margin: 0px 20px;
+}
+
+.skilllist li{
+  text-align: left;
+  list-style: none;
+  font-size: 20px;
+  font-family: "Yusei Magic", sans-serif;
+}
+
+
+/*  contact  */
+
+.contact {
+  padding: 20px 0px;
+}
+.contact h2{
+  margin: 15px 0px 30px 0px;
+}
+
+.iconcontact {
+  max-width: 100%;
+}
+
+.form-comment {
+  padding: 0px 18px;
+}
+
+
+/*メールフォーム*/
+
+.box-form{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.form-submit {
+  max-width: 100%;
+  padding: 0px 18px;
+}
+
+.form-submit p {
+  padding: 0px 5px;
+  margin: 0px;
+}
+
+.form-content {
+  margin-bottom: 8px;
+}
+
+form {
+  font-family: "Yusei Magic", sans-serif;
+  text-align: left;
+}
+
+input, textarea {
+  width: 300px;
+  max-width: 100%;
+}
+
+textarea {
+  height: 80px;
+}
+
+
+#form-name, #form-email, #form-msg {
+  background-color: #eeb4b4;
+  border-radius: 5px;
+  border: 0;
+  color:#926666;
+  font-family: 'arial narrow';
+  font-size: 14px;
+  }
+
+#form-name, #form-email {
+  height: 30px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+article {
+  max-width: 100%;
+  color: #96514d;
+}
+
+article p {
+  font-size: 5px;
+}
+
+.fa-envelope{
+  font-size: 15px;
+}
+
+/*   リンク   */
+
+a {
+  transition: color .4s;
+  text-decoration: none;
+}
+
+a:visited, a:link{
+  color: #000;
+}
+
+a:hover {
+  color: #96514d;
+}
+
+body {
+  font-family: "Squada One", "Yusei Magic", sans-serif;
+  text-align: center;
+}
+
+
+/*   feadInUp   */
+
+.animated {
+  opacity: 0;
+}
+
+h1.animated {
+  opacity: 1;
+}
+
+.fadeInUp {
+  animation-duration: 1.7s !important;
+}
+
+
+
+/*   全体   */
+
+body span {
+  color: #96514d;
+}
+
+
+
+/*  footer  */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin: 0; 
+  font-size: 12px; 
+  font-family: "Yusei Magic", sans-serif;
+  max-height: 8%;
+  max-width: 100%;
+}
+
+.box-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.github {
+  font-size: 25px;
+  margin: 0 10px;
+}
+
+.copyright {
+  margin: 10px 10px;
+  text-align: left;
+}
+
+
+header {
+  max-width: 100%;
+}

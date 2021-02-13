@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>miho's portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/jquery.fullpage.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Yusei+Magic&display=swap');
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+    </style>
+    <link rel="icon" href="./img/favicon.ico"><!--タイトルの横アイコン-->
+    <meta name="description" content="miho's portfolio"><!--検索エンジンの検索結果で表示される-->
+  </head>
+  
+  <body>
+    <div id="loader-bg">
+      <div class="hollow-dots-spinner" :style="spinnerStyle">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    
+    <header>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav class="globalMenuSp">
+          <ul>
+            <li><a href="#title">TOP</a></li>
+            <li><a href="#aboutme">ABOUTME</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#skill">SKILL</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+      </nav>
+      
+    </header>
+        <ul id="menu">
+          <li data-menuanchor="title"><a href="#title"><span>T</span>op</a></li>
+          <li data-menuanchor="aboutme"><a href="#aboutme"><span>A</span>bout me</a></li>
+          <li data-menuanchor="works"><a href="#works"><span>W</span>orks</a></a></li>
+          <li data-menuanchor="skill"><a href="#skill"><span>S</span>kill</a></li>
+          <li data-menuanchor="contact"><a href="#contact"><span>C</span>ontact</a></li>
+        </ul>
+        
+      <div id="fullpage">
+        
+        <div class="section title">
+          <img class="icon" src="img/hokuo_kuma.png" alt="TOP画像" width="810px" height="478px">
+          <h1 class="animated swing"><span>M</span>iho's <span>P</span>ortfolio<span>*</span></h1>
+        </div>
+        
+        <div class="section aboutme">
+          <div class="aboutme fadein animated">
+            <div class="box">
+              <div class="aboutmeimg">
+                <img class="iconabout" src="img/aboutme.png" alt="プロフィール画像" width="298px" height="258px">
+              </div>
+              <div class="aboutmetext">
+                <h2 class="aboutmeh"><span>A</span>bout me</h2>
+                <p class="aboutmep">関 実歩 / seki miho*<br>
+                愛知淑徳大学を卒業後、塾講師兼事務、<br>
+                調剤薬局事務、交通広告媒体管理を経験。<br>
+                自己紹介自己紹介</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section work">
+            <div class="works fadein animated">
+              <img class="iconwork" src="img/work.png" alt="work画像" width="274px" height="155px">
+              <h2><span>W</span>orks</h2>
+              <p>現在までの制作物です。</p>
+              
+  　          <div class="box">
+  　            
+                <div class="works-item">
+                  <a href="#" class="js-modal-open" data-target="modal01">
+                    <img src="./img/portfolio_sn.png" width="300px" height="200px">
+                    <div class="mask">
+  		                <div class="caption">Portfolio site</div>
+  	                </div>
+  	              </a>
+                </div>
+                
+                <div class="works-item">
+                  <a href="#" class="js-modal-open" data-target="modal02">
+                    <img src="./img/comingsoon.png" width="300px" height="200px">
+                    <div class="mask">
+  		                <div class="caption">Coming soon...</div>
+  	                </div>
+  	               </a>
+                </div>
+                
+                <div class="works-item">
+                  <a href="#" class="js-modal-open" data-target="modal03">
+                    <img src="./img/comingsoon.png" width="300px" height="200px">
+                    <div class="mask">
+  		                <div class="caption">Coming soon...</div>
+  	                </div>
+  	               </a>
+                </div>
+              </div>
+              
+              <!------モーダルここから------>
+              <div id="modal01" class="modal js-modal">
+                <div class="modal-bg js-modal-close"></div>
+                <div class="modal-content">
+                  <div class="work-modal">
+                    <div class="shrink">
+                      <img class="smn" src="./img/work1.png">
+                    </div>
+                    <div class="shrink-text">
+                      <h6 class="modal-title">ポートフォリオサイト</h6>
+                      <p>現在閲覧されているポートフォリオサイトです。</p>
+                      <br>
+                      <p>開発環境<br>
+                      macOS<br>
+                      <br>
+                      使用言語等<br>
+                      HTML/CSS/Javascript/jQuery/</p>
+                    </div>
+                  </div>
+                    <a href="#" class="js-modal-close closeModal">× close</a>
+                </div>
+              </div>
+            
+              <div id="modal02" class="modal js-modal">
+                <div class="modal-bg js-modal-close"></div>
+                <div class="modal-content">
+                  <p></p>
+                  <a href="#" class="js-modal-close closeModal">× close</a>
+                </div>
+              </div>
+            
+              <div id="modal03" class="modal js-modal">
+                <div class="modal-bg js-modal-close"></div>
+                <div class="modal-content">
+                  <p></p>
+                  <a href="#" class="js-modal-close closeModal">× close</a>
+                </div>
+              </div>
+              <!------モーダルここまで------>
+              
+            </div>
+        </div>
+        
+        <div class="section skill">
+          <div class="skill fadein animated">
+            <img class="iconskill" src="img/skill.png" alt="skill画像" width="270px" height="141px">
+            <h2><span>S</span>kill</h2>
+            <div class="box-skill">
+              <ul class="skilllist">
+                <li><i class="fab fa-html5"></i> HTML</li>
+                <li><i class="fab fa-css3-alt"></i> CSS</li>
+                <li><i class="fab fa-js-square"></i> Javascript</li>
+                <li><img src="img/jquery.png" width="20px" height="20px"> jQuery</li>
+                <li><i class="fab fa-vuejs"></i> Vue.js</li>
+              </ul>
+              <ul class="skilllist">
+                <li><img src="img/ruby.png" width="20px" height="20px"> Ruby</li>
+                <li><img src="img/rails.png" width="20px" height="20px"> Rails</li>
+                <li><img src="img/sql.png" width="20px" height="20px"> SQL</li>
+                <li><img src="img/mysql.png" width="20px" height="20px"> MySQL</li>
+                <li><i class="fab fa-git-square"></i> Git</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section contact">
+          <div class="contact fadein animated">
+            <img class="iconcontact" src="img/contact.png" alt="contact画像" width="294px" height="100px">
+            <h2><span>C</span>ontact</h2>
+            <div class="box-form">
+              <div class="form-comment">
+                <p>最後までご覧いただき誠にありがとうございました！<br><br>
+                ご質問、ご感想等ございましたら<br>こちらのフォームをご利用ください。</p>
+              </div>
+              <!-----------フォームここから------------->
+              <div class="form-submit">
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfKkEYoHet6CnHUQNzYH6YdgvfX11tSKNWeZKRMGL68nvTnMA/formResponse" name="googleForm" target="thxMsg" onsubmit="showThxMessage();">
+                  <div id="form">
+                    <div class="form-content">
+                      <p><label for="form-name">Name</label></p>
+                      <p><input id="form-name" type="text" name="entry.223128532" placeholder=" name" required=""></p>
+                    </div>
+                    <div class="form-content">
+                      <p><label for="form-email">Email</label></p>
+                      <p><input id="form-email" type="email" name="entry.509892287" placeholder=" email"></p>
+                    </div>
+                    <div class="form-content">
+                      <p><label for="form-msg">Message</label></p>
+                      <p><textarea id="form-msg" name="entry.124894875" placeholder=" message" required=""></textarea></p>
+                    </div>
+                    <div class="form-content">
+                      <p><button type="submit" name="button" value="send"><i class="far fa-paper-plane"></i> send</button></p>
+                    </div>
+                    <iframe name="thxMsg" style="display:none;"></iframe>
+                  </div>
+                  <article id="thxMessage" style="display: none; text-align: center;">
+                    <p>＼＼　<i class="far fa-envelope"></i>　／／</p><br>
+                    お問い合わせありがとうございます！<br>
+                    メールアドレスを入力してくださった方へは<br>
+                    近日中に返信させていただきます。
+                  </article>
+                </form>
+              </div>
+            <!-----------フォームここまで------------->
+            </div>           
+          </div>
+        </div>
+        
+      </div>
+      
+      <footer>
+        <div class="box-footer">
+          <div class="github">
+            <a href="https://github.com/sekimiho" target="_blank"><i class="fab fa-github" border="0"></i></a>
+          </div>
+          <div class="copyright">
+            <p><i class="far fa-copyright"></i>️2021 miho</p>
+          </div>
+        </div>
+      </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+    <script src="./js/jquery.fullpage.js"></script>
+    <script src="./js/scrolloverflow.js"></script>
+    <script src="./js/jquery.easings.min.js"></script>
+  </body>
+</html>
