@@ -29,19 +29,7 @@ img {
 
 
 
-/**     メディアクエリ    **/
-@media screen and (max-width:767px){
-  html {
-    font-size: 12px;
-  }
-  
-  #menu{
-    display:none;
-  }
-  header {
-    display:block;
-  }
-}
+
 
 
 
@@ -258,6 +246,21 @@ nav.globalMenuSp.active {
   list-style: none;
   padding: 0px 15px;
   font-size: 2rem;
+}
+
+/**     メディアクエリ    **/
+@media screen and (max-width:767px){
+  html {
+    font-size: 14px;
+  }
+  
+  #menu{
+    display:none;
+  }
+  
+  header {
+    display:block;
+  }
 }
 
 
@@ -504,7 +507,7 @@ textarea {
   background-color: #eeb4b4;
   border-radius: 5px;
   border: 0;
-  color:#926666;
+  color:#222;
   font-family: 'arial narrow';
   font-size: 1rem;
   }
@@ -514,7 +517,7 @@ textarea {
 }
 
 button {
-  background-color: #000;
+  background-color: #222;
   color: #fff;
   border-radius: 5px;
   border: 0;
