@@ -431,14 +431,15 @@ body.fixed {
 .skilllist li{
   text-align: left;
   list-style: none;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: "Yusei Magic", sans-serif;
-  border-bottom: 3px dashed #DCCD90;
+  letter-spacing: 0.2rem;
+  border-bottom: 2px dashed #DCCD90;
 }
 
 .skilllist img {
-  width: 1.4rem;
-  height:1.4rem;
+  width: 1.3rem;
+  height:1.3rem;
 }
 
 
